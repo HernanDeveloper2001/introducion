@@ -1,6 +1,16 @@
-
 {% block content %}
-blog list
+<h2>Blog List</h2>
+
+<ul>
+  {% for post in posts %}
+  <li>
+    <a href="{% url 'details' post.id %}">{{ post.title }}</a>
+    <a href="{% url 'update' post.id %}">Update</a>
+    <a href="{% url 'delete' post.id %}">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
+
 <br>
 <a href="{% url 'create' %}">Create</a>
 

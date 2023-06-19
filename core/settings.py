@@ -41,7 +41,10 @@ INSTALLED_APPS = [
 
     'core',
     'blog',
+    'bootstrap4',
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
